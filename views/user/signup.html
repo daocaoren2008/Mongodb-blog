@@ -1,0 +1,25 @@
+<%- include ../include/header.html%>
+<!--表单有文件域（type=file）的时候 添加enctype="multipart/form-data"-->
+<form method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label for="username" class="control-label">用户名</label>
+        <input type="text" class="form-control" id="username" name="username">
+    </div>
+    <div class="form-group">
+        <label for="password" class="control-label">密码</label>
+        <input type="password" class="form-control" id="password" name="password">
+    </div>
+
+    <div class="form-group">
+        <label for="email" class="control-label">邮箱</label>
+        <input type="email" class="form-control" id="email" name="email">
+    </div>
+    <div class="form-group">
+        <label for="avatar" class="control-label">头像</label>
+        <input type="file" id="avatar" name="avatar" class="form-control">
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">注册</button>
+    </div>
+</form>
+<%- include ../include/footer.html%>

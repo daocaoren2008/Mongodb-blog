@@ -1,0 +1,16 @@
+<%- include ../include/header.html%>
+<!--表单有文件域（type=file）的时候 添加enctype="multipart/form-data"-->
+<form method="post">
+    <div class="form-group">
+        <label for="name" class="control-label">标题</label>
+        <input type="text" class="form-control" id="name" name="name">
+    </div>
+    <div class="form-group">
+        <label for="content" class="control-label">内容</label>
+        <textarea type="text" cols="30" rows="10" class="form-control" id="content" name="content"></textarea>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">提交</button>
+    </div>
+</form>
+<%- include ../include/footer.html%>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%=title%></title>
+    <style>
+        .avatar{
+            width:32px;
+            height:32px;
+            border-radius: 20%;
+        }
+    </style>
+    <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.css">
+    <!--<link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">-->
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+    <div class="navbar-header">
+        <a class="navbar-brand" href="/">我的博客</a>
+    </div>
+    <div>
+        <ul class="nav navbar-nav">
+            <li><a href="/">首页</a></li>
+            <li><a href="/user/signup">注册</a></li>
+            <li><a href="/user/signin">登录</a></li>
+            <li><a href="/user/signout">退出</a></li>
+            <li><a href="/article/add">发表文章</a></li>
+        </ul>
+        <%if(user){%>
+        <ul class="nav navbar-right">
+            <li><a href="#">
+                <img class="avatar" src="<%=user.avatar%>" alt="<%=user.username%>">
+                <%=user.username%></a></li>
+        </ul>
+        <%}%>
+    </div>
+</nav>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <%if(success){%>
+            <div class="alert alert-success">
+                <%=success%>
+            </div>
+            <%}%>
+            <%if(error){%>
+            <div class="alert alert-danger">
+                <%=error%>
+            </div>
+            <%}%>
